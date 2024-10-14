@@ -13,7 +13,7 @@ def is_enabled(value, default):
 # PyroClient Setup 
 API_ID = environ.get('API_ID', '27002519') 
 API_HASH = environ.get('API_HASH', '1033ee721101d78366b4ac46aadf3930')
-BOT_TOKEN = environ.get('BOT_TOKEN', '6441051017:AAGnPizIBRr6V-4nlvrC7l-DPqo2dpVxWEA')
+BOT_TOKEN = environ.get('BOT_TOKEN', '6751025808:AAEiA1jqQ5YI0GEeLOiKscMcXNzueYxsi8E')
 # Bot settings
 WEB_SUPPORT = bool(environ.get("WEBHOOK", 'False')) # for web support on/off
 PICS = (environ.get('PICS' ,'https://te.legra.ph/file/94bc067909902a02eaf20.jpg')).split()
@@ -31,11 +31,12 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URL = environ.get('DATABASE_URL', "mongodb+srv://unknown4u1082:unknown4u1082@cluster0.hpvim.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") #mongo db url
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://VAISHNAV:VAISHNAV@cluster0.sn8ij4b.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "VAISHNAV")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 FILE_DB_URL = environ.get("FILE_DB_URL", DATABASE_URL)
 FILE_DB_NAME = environ.get("FILE_DB_NAME", DATABASE_NAME)
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'TELEGRAM_FILES')
+#COLLECTION_NAME = environ.get('COLLECTION_NAME', 'TELEGRAM_FILES')
 
 # Filters Configuration 
 MAX_RIST_BTNS = int(environ.get('MAX_RIST_BTNS', "10"))
